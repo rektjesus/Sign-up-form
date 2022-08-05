@@ -133,6 +133,8 @@ table {
     box-sizing: border-box;
 }
 
+/*___________________________________________________________ CSS RESET ABOVE */
+
 @font-face {
     font-family: Inter;
     src: url(./font/Inter-VariableFont_slnt\,wght.ttf);
@@ -152,6 +154,7 @@ body {
 }
 
 section {
+    transition: 1s;
     position: relative;
     min-height: 100vh;
     background-color: var(--color-background-primary);
@@ -161,44 +164,22 @@ section {
     padding: 20px;
 }
 
-label {
-    display: none;
-}
-
-input {
-    transition: 0.5s;
-    width: 280px;
-    height: 40px;
-    border: none;
-    border-radius: 10px;
-    margin: 10px 0px;
-    padding: 10px;
-    font-family: inherit;
-    font-size: 1em;
-
-}
-
-button {
-    border: none;
-    background-color: var(--color-accent-secondary);
-    font-family: inherit;
-    font-weight: bold;
-    color: white;
-    font-size: 1em;
-    width: 100px;
-    height: 30px;
-    margin: 10px 0px;
-    align-self: end;
-}
-
-input:focus {
-    transition: 0.5s;
-    border-radius: 0;
-    outline: none;
-}
-
-.sign_in {
+section .container {
     display: flex;
+    flex-shrink: 0;
+    position: relative;
+    height: 600px;
+    width: 800px;
+    box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.329);
+    overflow: hidden;
+}
+
+.sign_in,
+.sign_up {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
 }
 
 .sign_in .form_box {
@@ -206,8 +187,8 @@ input:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 400px;
-    height: 600px;
+    width: 50%;
+    height: 100%;
     background-color: var(--color-background-form);
     padding: 20px;
 }
@@ -234,15 +215,212 @@ a {
     text-decoration: none;
     color: rgb(78, 78, 255);
     font-weight: bolder;
+    cursor: pointer;
 }
 
 a:visited {
     text-decoration: none;
     color: rgb(78, 78, 255);
     font-weight: bolder;
+    cursor: pointer;
 }
 
-img {
-    width: 400px;
+.sign_in .image_box {
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+}
+
+.image_box img {
+    width: 100%;
     height: auto;
+}
+
+.logo {
+    height: 120px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 550px;
+}
+
+.logo img {
+    height: 80%;
+    width: auto;
+}
+
+.sign_up .form_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background-color: var(--color-background-form);
+    padding: 20px;
+}
+
+.sign_up .form_box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.sign_up .form_box h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-text);
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.sign_up .form_box p {
+    margin: 10px 0px;
+    font-size: 0.9rem;
+}
+
+.sign_up .image_box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+}
+
+.sign_up form p:first-of-type {
+    font-size: 0.8rem;
+}
+
+/* _________________________________RESPONSIVE_______________________________ */
+
+.section.active {
+    transition: 1s;
+    position: relative;
+    min-height: 100vh;
+    background-color: var(--color-background-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.sign_up {
+    visibility: hidden;
+}
+
+.sign_up.active {
+    visibility: visible;
+}
+
+.sign_in .image_box {
+    position: relative;
+    transition: 0.5s;
+    bottom: 0%;
+}
+
+.sign_in .form_box {
+    position: relative;
+    transition: 0.5s;
+    bottom: 0%;
+}
+
+.sign_in.active .image_box {
+    position: relative;
+    transition: 0.5s;
+    bottom: -100%;
+}
+
+.sign_in.active .form_box {
+    position: relative;
+    transition: 0.5s;
+    bottom: 100%;
+}
+
+.sign_up .image_box {
+    position: relative;
+    transition: 0.5s;
+    top: 100%;
+}
+
+.sign_up .form_box {
+    position: relative;
+    transition: 0.5s;
+    top: -100%;
+}
+
+.sign_up.active .image_box {
+    transition: 0.5s;
+    top: 0%;
+}
+
+.sign_up.active .form_box {
+    transition: 0.5s;
+    top: 0%;
+}
+
+/*____________________________INPUTS AND BUTTONS_____________________________ */
+
+label {
+    display: none;
+}
+
+input {
+    transition: 0.5s;
+    width: 280px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px 0px;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 1em;
+
+}
+
+.sign_up button {
+    border: none;
+    background-color: var(--color-accent-secondary);
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.336);
+    font-family: inherit;
+    font-weight: bold;
+    color: white;
+    font-size: 1em;
+    width: 100px;
+    height: 30px;
+    margin: 10px 0px;
+    align-self: end;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sign_in button {
+    border: none;
+    background-color: var(--color-accent-primary);
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.336);
+    font-family: inherit;
+    font-weight: bold;
+    color: white;
+    font-size: 1em;
+    width: 100px;
+    height: 30px;
+    margin: 10px 0px;
+    align-self: end;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sign_up button:active {
+    background-color: #c94e15;
+}
+
+.sign_in button:active {
+    background-color: #007ebd;
+}
+
+input:focus {
+    transition: 0.5s;
+    border-radius: 0;
+    outline: none;
 }
