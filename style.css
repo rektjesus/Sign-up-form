@@ -153,6 +153,10 @@ body {
     --color-text: #3b3b3b;
 }
 
+.logo_responsive {
+    display: none;
+}
+
 section {
     transition: 1s;
     position: relative;
@@ -423,4 +427,86 @@ input:focus {
     transition: 0.5s;
     border-radius: 0;
     outline: none;
+}
+
+@media only screen and (max-width: 700px) {
+
+    :root {
+        --color-text: #ffffff;
+    }
+
+    h2 {
+        text-shadow: 1px 1px 10px #3b3b3b;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    section .logo_responsive {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70px;
+        width: auto;
+        position: fixed;
+        top: 0;
+        margin: auto 0px;
+    }
+
+    section .logo_responsive img {
+        height: 80%;
+        width: auto;
+    }
+
+    section .container {
+        width: 100vw;
+        box-shadow: none;
+    }
+
+    .sign_up .image_box {
+        display: none;
+    }
+
+    .sign_in .image_box {
+        display: none;
+    }
+
+    .sign_in .form_box {
+        width: 100%;
+        background: #e4dada7c;
+        margin: 0px 20px;
+    }
+
+    .sign_up .form_box {
+        width: 100%;
+        background: #e4dada7c;
+        top: 100%;
+        margin: 0px 20px;
+    }
+
+    .sign_in.active .form_box {
+        width: 100%;
+        background: #e4dada7c;
+        bottom: 100%;
+    }
+
+    .sign_up.active .form_box {
+        width: 100%;
+        background: #e4dada7c;
+        top: 0%;
+    }
+
+    section {
+        background-image: url(./img/background1.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    section.active {
+        background-image: url(./img/background2.jpg);
+        background-position: center;
+        background-size: cover;
+    }
 }
