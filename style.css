@@ -442,6 +442,8 @@ input:focus {
     section {
         display: flex;
         flex-direction: column;
+        overflow-y: hidden;
+        overflow-x: hidden;
     }
 
     section .logo_responsive {
@@ -450,9 +452,8 @@ input:focus {
         align-items: center;
         height: 70px;
         width: auto;
-        position: fixed;
+        position: absolute;
         top: 0;
-        margin: auto 0px;
     }
 
     section .logo_responsive img {
