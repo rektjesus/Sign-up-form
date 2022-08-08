@@ -481,6 +481,7 @@ input:focus {
         align-items: center;
         height: 70px;
         width: auto;
+        position: relative;
         margin-bottom: auto;
     }
 
