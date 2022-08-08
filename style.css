@@ -473,27 +473,24 @@ input:focus {
     }
 
     section .container {
-        position: absolute;
+        width: 100vw;
+        box-shadow: none;
+        margin: auto 0;
+        position: relative;
     }
 
     section .logo_responsive {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 70px;
+        height: 60px;
         width: auto;
         position: relative;
-        margin-bottom: auto;
     }
 
     section .logo_responsive img {
         height: 80%;
         width: auto;
-    }
-
-    section .container {
-        width: 100vw;
-        box-shadow: none;
     }
 
     .sign_up .image_box {
