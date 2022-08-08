@@ -474,10 +474,19 @@ input:focus {
 
     section .container {
         width: 100vw;
+        height: 500px;
         box-shadow: none;
         margin-bottom: 30%;
         margin-top: 20%;
         position: relative;
+    }
+
+    .sign_up .form_box h2 {
+        margin-bottom: auto;
+    }
+
+    section .container input {
+        margin: 5px;
     }
 
     section .logo_responsive {
@@ -506,6 +515,7 @@ input:focus {
         width: 100%;
         background: #e4dada7c;
         margin: 0px 20px;
+        padding: 0px 20px;
     }
 
     .sign_up .form_box {
@@ -513,6 +523,7 @@ input:focus {
         background: #e4dada7c;
         top: 100%;
         margin: 0px 20px;
+        padding: 0px 20px;
     }
 
     .sign_in.active .form_box {
