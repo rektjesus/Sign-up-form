@@ -475,7 +475,8 @@ input:focus {
     section .container {
         width: 100vw;
         box-shadow: none;
-        margin: auto 0;
+        margin-bottom: 30%;
+        margin-top: 20%;
         position: relative;
     }
 
@@ -483,7 +484,7 @@ input:focus {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 60px;
+        height: 70px;
         width: auto;
         position: relative;
     }
