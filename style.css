@@ -453,7 +453,6 @@ input:focus {
     html,
     body {
         overflow-x: hidden;
-        overflow-y: hidden;
     }
 
     section {
