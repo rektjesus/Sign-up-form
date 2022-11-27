@@ -718,12 +718,10 @@ input:focus {
 
     section.active {
         display: flex;
-        flex-direction: column;
         background-image: url(./img/background2.jpg);
         background-position: center;
         background-size: cover;
         padding: 0px 20px;
-        position: relative;
         justify-content: flex-start;
         align-items: center;
     }
