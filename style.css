@@ -308,7 +308,7 @@ a:visited {
 section.active {
     transition: 1s;
     position: relative;
-    height: 100%;
+    min-height: 100vh;
     background-color: var(--color-background-secondary);
     display: flex;
     justify-content: center;
@@ -482,7 +482,6 @@ input:focus {
         width: 100vw;
         box-shadow: none;
         position: relative;
-        height: 90%;
     }
 
     section .logo_responsive {
