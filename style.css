@@ -450,12 +450,6 @@ input:focus {
         text-shadow: 1px 1px 10px #3b3b3b;
     }
 
-    html,
-    body {
-        overflow-x: hidden;
-        overflow-y: hidden;
-    }
-
     body {
         position: relative;
     }
@@ -469,6 +463,8 @@ input:focus {
         padding: 0px 20px;
         position: relative;
         justify-content: flex-start;
+        height: 100%;
+        height: -webkit-fill-available;
     }
 
     section.active {
@@ -477,6 +473,8 @@ input:focus {
         background-size: cover;
         padding: 0px 20px;
         justify-content: flex-start;
+        height: 100%;
+        height: -webkit-fill-available;
     }
 
     section .container {
