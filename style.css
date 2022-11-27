@@ -482,8 +482,6 @@ input:focus {
         width: 100vw;
         box-shadow: none;
         position: relative;
-        margin-top: auto;
-        margin-bottom: auto;
         height: 90%;
     }
 
